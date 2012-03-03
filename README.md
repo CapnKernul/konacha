@@ -62,6 +62,10 @@ spec file (e.g. `http://localhost:8888/array_sum_spec`).
 
 Alternatively, you can run the specs headlessly with the `konacha:ci` task.
 
+If you'd like to include any CSS to run alongside your specs, create a file called
+`spec/javascripts/spec_helper.css` with any CSS you'd like to include. Since it is part of
+the asset pipeline, you may require your application's CSS using Sprockets.
+
 ## Spec Helper
 
 Since Konacha integrates with the asset pipeline, using setup helpers in your specs is

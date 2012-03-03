@@ -12,4 +12,9 @@ describe "layouts/konacha/specs" do
     render
     rendered.should have_css("script[src='/assets/konacha/runner.js']")
   end
+
+  it "includes the CSS spec helper" do
+    render
+    rendered.should have_css("link[rel=stylesheet][href='/assets/spec_helper.css']")
+  end
 end

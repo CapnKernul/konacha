@@ -15,6 +15,12 @@ describe Konacha do
         subject.spec_dir.should == "spec/javascripts"
       end
     end
+
+    describe ".css_spec_helper" do
+      it "defaults to 'spec_helper'" do
+        subject.css_spec_helper.should == "spec_helper"
+      end
+    end
   end
 
   describe ".spec_paths" do

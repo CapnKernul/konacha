@@ -21,11 +21,12 @@ module Konacha
 
       options = app.config.konacha
 
-      options.spec_dir    ||= "spec/javascripts"
-      options.port        ||= 8888
-      options.interface   ||= :bdd
-      options.application ||= self.class.application(app)
-      options.driver      ||= :selenium
+      options.spec_dir        ||= "spec/javascripts"
+      options.css_spec_helper ||= "spec_helper"
+      options.port            ||= 8888
+      options.interface       ||= :bdd
+      options.application     ||= self.class.application(app)
+      options.driver          ||= :selenium
 
       app.config.assets.paths << app.root.join(options.spec_dir).to_s
     end
